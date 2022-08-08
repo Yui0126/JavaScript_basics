@@ -52,29 +52,29 @@
 
 
 //Challenge 10-16
-var yourName = prompt("What is your name?", "");
+// var yourName = prompt("What is your name?", "");
 
-function hello(name) {
-    if (name == null || name == "") {
-        return "You did not give me a name :(";
-    } else {
-        return `Hello ${name}, and welcome!`;
-    };
-};
+// function hello(name) {
+//     if (name == null || name == "") {
+//         return "You did not give me a name :(";
+//     } else {
+//         return `Hello ${name}, and welcome!`;
+//     };
+// };
 
-var sweets = ["ice cream", "chocolate", "chips", "berries"];
-var dishes = ["soup", "rice", "pizza", "dumplings"];
+// var sweets = ["ice cream", "chocolate", "chips", "berries"];
+// var dishes = ["soup", "rice", "pizza", "dumplings"];
 
-function randomInit(min, max) {
-    return Math.floor((max - min + 1) * Math.random()) + min;
-}
+// function randomInit(min, max) {
+//     return Math.floor((max - min + 1) * Math.random()) + min;
+// }
 
-function hospitality(name, gift) {
-    console.log(hello(yourName));
-    var randomFood = gift[randomInit(0, gift.length - 1)];
-    console.log(`${name}, would you like some ${randomFood}?`);
-}
-hospitality(yourName, dishes);
+// function hospitality(name, gift) {
+//     console.log(hello(yourName));
+//     var randomFood = gift[randomInit(0, gift.length - 1)];
+//     console.log(`${name}, would you like some ${randomFood}?`);
+// }
+// hospitality(yourName, dishes);
 
 
 
