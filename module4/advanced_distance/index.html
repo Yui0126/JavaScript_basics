@@ -13,6 +13,7 @@
 
     <!--/ /-------- My Styles --------/ /-->
     <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 
 </head>
 
@@ -36,40 +37,6 @@
 
     <p id="directions">Press the "K" key to switch to kilometer converstion, press the "M" key to switch to mile conversion</p>
 
-    <script>
-        var convertType = "miles";
-        var heading = document.querySelector('h1');
-        var intro = document.querySelector('p');
-        var answerDiv = document.getElementById('answer');
-        var form = document.getElementById('convert');
-        document.addEventListener('keydown', function(event) {
-            var key = event.code
-            if (key === 'KeyK') {
-                convertType = "kilometers";
-                heading.innerHTML = "Kilometers to Miles Converter";
-                intro.innerHTML = "Type in a number of kilometers and click the button to convert the distance to miles.";
-            } else if (key === 'KeyM') {
-                convertType = "miles";
-                heading.innerHTML = "Miles to Kilometers Converter";
-                intro.innerHTML = "Type in a number of miles and click the button to convert the distance to kilometers.";
-            }
-        });
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            var distance = parseFloat(document.getElementById('distance').value);
-            if (distance) {
-                if (convertType === "miles") {
-                    var conversionM = (distance * 1.609344).toFixed(3);
-                    answerDiv.innerHTML = `<h2>${distance} miles in kilometers is ${conversionM}</h2>`;
-                } else if (convertType === "kilometers") {
-                    var conversionK = (distance * 0.621371192).toFixed(3);
-                    answerDiv.innerHTML = `<h2>${distance} kilometers in miles is ${conversionK}</h2>`;
-                }
-            } else {
-                answerDiv.innerHTML = "<h2>Please provide number!</h2>"
-            }
-        });
-    </script>
 </body>
 
 </html>
