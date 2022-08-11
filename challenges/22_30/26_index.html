@@ -11,7 +11,7 @@
 <body>
     <h1>JavaScript Event Challenges: Challenge 25</h1>
     <div>
-        <p>Here is the first paragraph of text</p>
+        <p>This is paragraph number 1</p>
     </div>
     <button>Add a paragraph</button>
     <button>Remove a paragraph</button>
@@ -20,11 +20,13 @@
     var divTag = document.querySelector('div');
     var addBtn = document.querySelectorAll('button')[0];
     var remBtn = document.querySelectorAll('button')[1];
+    var numOfPs = 1;
     addBtn.addEventListener('click', function() {
-        var newPara = document.createElement('p');
-        var newParaText = document.createTextNode('A new paragraph!');
-        newPara.appendChild(newParaText);
-        divTag.appendChild(newPara);
+        numOfPs++;
+        var textPara = document.createElement('p');
+        var newParaText = document.createTextNode(`This is paragraph number ${numOfPs}`);
+        textPara.appendChild(newParaText);
+        divTag.appendChild(textPara);
     });
     remBtn.addEventListener('click', function() {
         var allPs = document.querySelectorAll('p');
